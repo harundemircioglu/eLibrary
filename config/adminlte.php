@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Admin</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -106,6 +106,7 @@ return [
     |
     */
 
+    //SAYFA YÜKLENME ANİMASYONU
     'preloader' => [
         'enabled' => true,
         'img' => [
@@ -253,10 +254,10 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin/home',
     'logout_url' => 'logout',
-    'login_url' => 'login',
-    'register_url' => 'register',
+    //'login_url' => 'login',
+    //'register_url' => 'register',
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
     'profile_url' => false,
@@ -291,44 +292,55 @@ return [
 
     'menu' => [
         // Navbar items:
-        [
+
+        //ARAMA ÇUBUĞU AYARLARI
+        /*[
             'type'         => 'navbar-search',
             'text'         => 'search',
             'topnav_right' => true,
         ],
+        */
         [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
 
         // Sidebar items:
+
+
+        //SOL MENU ARAMA ÇUBUĞU
+        /*
         [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
+        */
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
+            'text'        => 'İşlemler',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
+            //'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'Hesap Ayarları'],
         [
-            'text' => 'profile',
+            'text' => 'Profil',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
+            'text' => 'Şifre ayarları',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
+
+        //ÇOKLU MENÜ AYARLARI
+        /*
         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
@@ -367,6 +379,11 @@ return [
                 ],
             ],
         ],
+        */
+
+
+        //LABEL AYARLARI
+        /*
         ['header' => 'labels'],
         [
             'text'       => 'important',
@@ -383,6 +400,7 @@ return [
             'icon_color' => 'cyan',
             'url'        => '#',
         ],
+        */
     ],
 
     /*

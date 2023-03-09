@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\LoginController as AdminLoginController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\User\LoginController as UserLoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,4 +22,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//ADMIN
+
+Route::get('admin/home', [App\Http\Controllers\HomeController::class, 'index']);
+
+Route::get('admin/login',[AdminLoginController::class,'login']);
+
+Route::get('admin/register',[AdminLoginController::class,'register']);
+
+//USER
+
+Route::get('login',[UserLoginController::class,'login'])->name('login');
+
+Route::get('register',[UserLoginController::class,'register'])->name('register');
+
