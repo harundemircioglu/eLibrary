@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-//ADMIN
+// ADMIN (KULLANICI İŞLEMLERİ)
 
 Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'index']);
 
@@ -34,8 +34,6 @@ Route::get('/admin/register',[AdminLoginController::class,'register']);
 Route::get('/admin/islemler',[IslemController::class,'index']);
 
 Route::get('/admin/islemler/kullanici_islemleri',[IslemController::class,'kullanici_islemleri'])->name('admin.kullanici_islemleri');
-
-Route::get('/admin/islemler/kitap_islemleri',[IslemController::class,'kitap_islemleri'])->name('admin.kitap_islemleri');
 
 Route::post('/addUser',[IslemController::class,'addUser'])->name('addUser');
 
@@ -48,9 +46,34 @@ Route::get('/delete_user_show/{id}',[IslemController::class,'deleteShow'])->name
 Route::POST('/delete_user/{id}',[IslemController::class,'deleteUser'])->name('admin.deleteUser');
 
 
+// ADMIN (KİTAP İŞLEMLERİ)
+
+Route::get('/admin/islemler/kitap_islemleri',[IslemController::class,'kitap_islemleri'])->name('admin.kitap_islemleri');
+
+Route::post('/addBook',[IslemController::class,'addBook'])->name('addBook');
+
+Route::get('/allBook',[IslemController::class,'allBook'])->name('allBook');
+
+Route::get('/showEditBook/{id}',[IslemController::class,'showEditBook'])->name('showEditBook');
+
+Route::post('/updateBook/{id}',[IslemController::class,'updateBook'])->name('updateBook');
+
+Route::get('/showDeleteBook/{id}',[IslemController::class,'showDeleteBook'])->name('showDeleteBook');
+
+Route::post('/deleteBook/{id}',[IslemController::class,'deleteBook'])->name('deleteBook');
+
+
+
+
+
+
+
+
+
+
+
 //USER
 
 Route::get('/login',[UserLoginController::class,'login'])->name('login');
 
 Route::get('/register',[UserLoginController::class,'register'])->name('register');
-

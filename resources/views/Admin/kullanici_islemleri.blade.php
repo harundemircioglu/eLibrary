@@ -11,28 +11,41 @@
             <x-adminlte-callout class="mt-2">
                 <h3>Kullanıcı ekle</h3>
 
-                <div class="card card-primary mt-3">
-                    <form>
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Ad</label>
-                                <input type="text" id="name" name="name" class="form-control" placeholder="Ad">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email</label>
-                                <input type="email" class="form-control" id="email" name="email"
-                                    placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Şifre</label>
-                                <input type="password" class="form-control" id="password" name="password"
-                                    placeholder="Şifre">
-                            </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Ad</label>
+                                            <input type="text" id="name" name="name" class="form-control"
+                                                placeholder="Ad">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email</label>
+                                            <input type="email" class="form-control" id="email" name="email"
+                                                placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Şifre</label>
+                                            <input type="password" class="form-control" id="password" name="password"
+                                                placeholder="Şifre">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="card-footer col-md-12">
+                                        <button type="button" id="addUser" class="btn bg-gradient-warning">EKLE</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="card-footer">
-                            <button type="button" id="addUser" class="btn bg-gradient-warning">EKLE</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </x-adminlte-callout>
 
@@ -59,7 +72,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Şifre</label>
-                                    <input type="text" class="form-control" id="editPassword" name="editPassword"
+                                    <input type="password" class="form-control" id="editPassword" name="editPassword"
                                         placeholder="Yeni şifre">
                                 </div>
                             </div>
@@ -91,7 +104,8 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <button type="button" id="deleteUser" class="btn btn-block bg-gradient-danger">SİL</button>
+                                <button type="button" id="deleteUser"
+                                    class="btn btn-block bg-gradient-danger">SİL</button>
                             </div>
                         </form>
                     </div>
@@ -106,6 +120,7 @@
                 <h3>Tüm kullanıcılar</h3>
 
                 <!--  1) KULLANICILAR ARASINDA FİLTRELEME YAPILACAK-->
+                <!-- 3) KULLANICILAR TABLO İLE SAYFA SAYFA GETİRİLECEK-->
                 <!-- 2) KULLANICILAR AJAX İLE GETİRİLECEK-->
                 <div class="container mt-5">
                     <div class="row">
@@ -297,11 +312,11 @@
 
                     var user_id = $('#edit_id').val();
 
-                    var user={
-                        'name': $('#editName').val(),
-                        'email': $('#editEmail').val(),
-                        'password': $('#editPassword').val(),
-                    }
+                    var user = {
+                        'editName': $('#editName').val(),
+                        'editEmail': $('#editEmail').val(),
+                        'editPassword': $('#editPassword').val()
+                    };
 
                     $.ajax({
                         type: "POST",
@@ -309,7 +324,18 @@
                         data: user,
                         dataType: "json",
                         success: function(response) {
-                            console.log(response.success);
+                            $('#successMsgBox').slideDown().text(response.success).delay(4000).slideUp(
+                                2000);
+
+                            //USER DETAIL AREA HİDE
+                            $('.userDetailArea').hide();
+
+                            //EDIT USER AREA HİDE
+                            $('.editUser').hide();
+
+                            //DELETE USER AREA HİDE
+                            $('.deleteUser').hide();
+
                         }
                     });
 
@@ -383,8 +409,5 @@
 
                 });
                 //DELETE USER OK AREA END
-
-
-
             </script>
         @stop
