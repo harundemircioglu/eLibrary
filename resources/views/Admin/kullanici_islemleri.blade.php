@@ -154,6 +154,7 @@
                         </div>
                     @endforeach
                 </div>
+                {{ $users->links() }}
             </x-adminlte-callout>
         @endsection
 

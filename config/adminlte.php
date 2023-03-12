@@ -108,7 +108,7 @@ return [
 
     //SAYFA YÜKLENME ANİMASYONU
     'preloader' => [
-        'enabled' => true,
+        'enabled' => false,
         'img' => [
             'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
             'alt' => 'AdminLTE Preloader Image',
@@ -322,7 +322,7 @@ return [
         ],
         [
             'text'        => 'İşlemler',
-            'url'         => 'admin/pages',
+            'url'         => 'admin/islemler',
             'icon'        => 'far fa-fw fa-file',
             //'label'       => 4,
             'label_color' => 'success',

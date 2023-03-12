@@ -2,8 +2,13 @@
 
 use App\Http\Controllers\Admin\IslemController;
 use App\Http\Controllers\Admin\LoginController as AdminLoginController;
+use App\Http\Controllers\Auth\LoginController as AuthLoginController;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\User\LibraryController;
 use App\Http\Controllers\User\LoginController as UserLoginController;
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +22,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+//ANASAYFA
+
+Route::get('/',[IndexController::class,'index'])->name('index');
 
 Auth::routes();
 
@@ -102,8 +108,35 @@ Route::post('/deleteBook/{id}',[IslemController::class,'deleteBook'])->name('del
 
 //USER
 
-//LOGIN
+//LOGIN SAYFASI
 Route::get('/login',[UserLoginController::class,'login'])->name('login');
 
-//REGISTER
+//USER LOGIN
+Route::post('/loginUser',[UserController::class,'login'])->name('userLogin');
+
+//REGISTER SAYFASI
 Route::get('/register',[UserLoginController::class,'register'])->name('register');
+
+//USER REGISTER
+Route::post('/userRegister',[UserController::class,'register'])->name('userRegister');
+
+//LOGOUT
+Route::get('/logout',[UserLoginController::class,'logout'])->name('logout');
+
+//PROFİLE
+Route::get('/profile/{id}',[UserController::class,'profile'])->name('profile');
+
+//MY LIBRARIES
+Route::get('/profile/{id}/myLibraries',[LibraryController::class,'myLibraries'])->name('myLibraries');
+
+//ADD LIBRARY
+Route::post('/addLibrary',[LibraryController::class,'addLibrary'])->name('addLibrary');
+
+//LIBRARY DETAIL
+Route::get('/profile/myLibraries/{id}',[LibraryController::class,'libraryDetails'])->name('libraryDetails');
+
+//USER UPDATE
+Route::post('/updateUser/{id}',[UserController::class,'update'])->name('updateUser');
+
+//KİTAP DETAY
+Route::get('/book/{id}',[BookController::class,'bookDetail'])->name('bookDetail');

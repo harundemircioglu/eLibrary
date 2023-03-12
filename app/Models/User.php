@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        //KULLANICILARA YETKİ VERİLECEK (ADMIN - KULLANICI OLARAK)
     ];
 
     /**
@@ -41,4 +42,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function libraries()
+    {
+        return $this->hasMany(Library::class,'olusturan_kisi_id','id');
+    }
 }

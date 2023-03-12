@@ -15,9 +15,11 @@ class IslemController extends Controller
         return view('Admin.islemler');
     }
 
+    //KULLANICI İŞLEMLERİ
+
     public function kullanici_islemleri()
     {
-        $users = User::all();
+        $users = User::paginate(5); // KULLANICILARI 5 KİŞİLİK GRUPLAR HALİNDE SAYFALIYOR
         return view('Admin.kullanici_islemleri', compact('users'));
     }
 
@@ -77,6 +79,8 @@ class IslemController extends Controller
             'success'=>'Silme işlemi başarılı.'
         ]);
     }
+
+    //KİTAP İŞLEMLERİ
 
     public function kitap_islemleri()
     {
