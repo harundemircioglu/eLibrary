@@ -15,4 +15,6 @@ class Library extends Model
     {
         return $this->hasMany(User::class,'olusturan_kisi_id','id');
     }
+
+    //BU MODEL, UserLibraryBook MODELİ İLE İLİŞKİLENDİRİLECEK.
 }

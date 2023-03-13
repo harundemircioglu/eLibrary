@@ -47,6 +47,12 @@ Route::get('/admin/login',[AdminLoginController::class,'login']);
 //REGISTER
 Route::get('/admin/register',[AdminLoginController::class,'register']);
 
+//PROFILE
+Route::get('admin/profile',[IslemController::class,'profile']);
+
+//PASSWORD SETTINGS
+Route::get('admin/password-settings',[IslemController::class,'passwordSettings']);
+
 //İSLEMLER
 Route::get('/admin/islemler',[IslemController::class,'index']);
 
@@ -140,3 +146,6 @@ Route::post('/updateUser/{id}',[UserController::class,'update'])->name('updateUs
 
 //KİTAP DETAY
 Route::get('/book/{id}',[BookController::class,'bookDetail'])->name('bookDetail');
+
+//KİTABI KÜTÜPHANEYE EKLE
+Route::post('/addUserLibraryBook',[BookController::class,'addUserLibraryBook'])->name('addUserLibraryBook');

@@ -330,12 +330,12 @@ return [
         ['header' => 'Hesap Ayarları'],
         [
             'text' => 'Profil',
-            'url'  => 'admin/settings',
+            'url'  => 'admin/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'Şifre ayarları',
-            'url'  => 'admin/settings',
+            'url'  => 'admin/password-settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
 

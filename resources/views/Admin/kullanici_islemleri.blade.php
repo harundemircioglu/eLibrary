@@ -75,6 +75,13 @@
                                     <input type="password" class="form-control" id="editPassword" name="editPassword"
                                         placeholder="Yeni şifre">
                                 </div>
+                                <div class="form-group">
+                                    <label for="showUserLibrary">Kullanıcıya ait kütüphaneler</label>
+                                    <button id="showUserLibrary" type="button" class="btn btn-outline-info form-control">GÖSTER</button>
+                                    <p class="mt-2">BURADA, BU KULLANICIYA AİT KÜTÜPHANELER VE BU KÜTÜPHANELER İÇERİSİNDE BULUNAN KİTAPLAR GÖRÜNTÜLENECEK.</p>
+                                    <p class="mt-2">BU ALAN ( KULLANICIYA AİT KÜTÜPHANELER ) <b>ÇALIŞMAMAKTADIR</b>. SADECE TASARLANDI. </p>
+                                    <p class="mt-2">CRUD İŞLEMLERİ <b>ÇALIŞIYOR</b>.</p>
+                                </div>
                             </div>
                             <div class="card-footer">
                                 <button type="button" id="updateUser"

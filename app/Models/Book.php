@@ -10,4 +10,6 @@ class Book extends Model
     use HasFactory;
 
     protected $fillable=['kitap_adi','kitap_turu','yazar_adi','yayin_evi','yayinlanma_tarihi'];
+
+    //BU MODEL, UserLibraryBook MODELİ İLE İLİŞKİLENDİRİLECEK.
 }

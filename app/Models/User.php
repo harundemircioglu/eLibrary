@@ -47,4 +47,6 @@ class User extends Authenticatable
     {
         return $this->hasMany(Library::class,'olusturan_kisi_id','id');
     }
+
+    //BU MODEL, UserLibraryBook MODELİ İLE İLİŞKİLENDİRİLECEK.
 }
