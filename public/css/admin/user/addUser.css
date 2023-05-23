@@ -1,0 +1,77 @@
+.new-user-header-area {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.new-user-header-area h6 {
+    color: #D72323;
+}
+
+.validation-area {
+    width: auto;
+    height: auto;
+}
+
+.validation-area ul {
+    list-style-type: none;
+    color: #303841;
+    font-weight: 500;
+}
+
+.new-user-form-area {
+    width: 100%;
+    height: auto;
+}
+
+.new-user-form {
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-user-form form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.new-user-input-area {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-user-input-area .input-txt {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    text-indent: 5px;
+    background-color: #EEEEEE;
+}
+
+.new-user-input-area .input-btn {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #3A4750;
+    color: #EEEEEE;
+    transition: .3s ease-in-out;
+}
+
+.new-user-input-area .input-btn:hover {
+    background-color: #303841;
+}

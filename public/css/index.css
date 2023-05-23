@@ -1,0 +1,114 @@
+.item {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+}
+
+.item img {
+    width: 200px;
+    height: 220px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.book-area {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.book-image-area {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-header-area {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-indent: 10px;
+}
+
+.bookItem a {
+    text-decoration: none;
+    color: #3A4750;
+    transition: .3s ease-in-out;
+}
+
+.bookItem a:hover {
+    color: #303841;
+}
+
+
+/*BACK TO TOP*/
+
+
+.back-top-area {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 80%;
+    z-index: 99;
+}
+
+.back-top {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEEEEE;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    margin-right: 2%;
+}
+
+.back-top:hover {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .4);
+}
+
+.back-top i {
+    font-size: 30px;
+}
+
+@media (max-width:1024px) {
+
+    .back-top-area {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 90%;
+        z-index: 99;
+    }
+
+    .back-top {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #EEEEEE;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, .2);
+        z-index: 999;
+    }
+
+    .back-top i {
+        font-size: 30px;
+    }
+}

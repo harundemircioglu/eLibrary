@@ -1,0 +1,225 @@
+.row {
+    margin: 0px !important;
+}
+
+.users-area {
+    width: 100%;
+    height: auto;
+}
+
+.header-item {
+    font-weight: 500;
+    background-color: #EEEEEE;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.users-area form {
+    width: 100%;
+    height: 100%;
+}
+
+.search-user-area {
+    width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-user-area .search-user {
+    width: 70%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border: 1px solid rgba(58, 71, 80, 1);
+    border-radius: 5px;
+    text-indent: 5px;
+}
+
+.search-user-area .search-btn {
+    width: 25%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #3A4750;
+    color: #EEEEEE;
+}
+
+.user-area {
+    width: 100%;
+    height: auto;
+}
+
+.user-area .user {
+    width: 100%;
+    height: auto;
+}
+
+.user .edit-btn {
+    width: 100px;
+    height: 40px;
+    background-color: #3A4750;
+    color: #EEEEEE;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.user .delete-btn {
+    width: 100px;
+    height: 40px;
+    background-color: #D72323;
+    color: #EEEEEE;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.edit-delete-area {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-delete-area form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-delete-area .edit-user-area {
+    width: 300px;
+    height: auto;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.edit-delete-area .delete-user-area {
+    width: 300px;
+    height: auto;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.close-btn-area {
+    width: 90%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.close-btn-area .close-btn {
+    width: 40px;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 100%;
+    background-color: #D72323;
+    color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-area {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-area a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #3A4750;
+    background-color: #EEEEEE;
+}
+
+.input-area .input-txt {
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .2);
+    outline: none;
+    text-indent: 5px;
+}
+
+.input-area .input-btn {
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #3A4750;
+    outline: none;
+    border: none;
+    color: #EEEEEE;
+    transition: .3s ease-in-out;
+}
+
+.input-area .input-btn:hover {
+    background-color: #303841;
+}
+
+.delete-btn {
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #D72323;
+    outline: none;
+    border: none;
+    color: #EEEEEE;
+    transition: .3s ease-in-out;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination li {
+    display: inline;
+    margin-right: 5px;
+}
+
+.pagination li a,
+.pagination li span {
+    color: #333;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pagination li.active a {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.pagination li.disabled a,
+.pagination li.disabled span {
+    color: #ccc;
+    cursor: not-allowed;
+}
