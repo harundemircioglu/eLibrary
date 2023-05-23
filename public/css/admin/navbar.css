@@ -1,0 +1,169 @@
+.menu-control-area{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #EEEEEE;
+}
+
+.menu-control-area .menu-control-item{
+    color: #303841;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar-area {
+    width: 100%;
+    height: 60px;
+    background-color: #303841;
+}
+
+.main-nav-area {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-menu-area {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-menu-area .logo-area {
+    width: 40%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-area .logo {
+    color: #EEEEEE;
+    font-weight: 400;
+}
+
+.logo-area a{
+    text-decoration: none;
+}
+
+.center-menu-area {
+    width: 40%;
+    height: 100%;
+    display: block;
+}
+
+.right-menu-area {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-area {
+    width: 40%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-area a {
+    text-decoration: none;
+    width: 70%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D72323;
+    color: #EEEEEE;
+    border-radius: 5px;
+}
+
+@media (min-width:300px) and (max-width:1024px) {
+    .navbar-area {
+        width: 100%;
+        height: 60px;
+        background-color: #303841;
+    }
+
+    .main-nav-area {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .left-menu-area {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-menu-area .logo-area {
+        width: 80%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-area .logo {
+        color: #EEEEEE;
+        font-weight: 400;
+    }
+
+    .logo-area a{
+        text-decoration: none;
+    }
+
+    .logo-area h6 {
+        color: #EEEEEE;
+    }
+
+    .center-menu-area {
+        width: 40%;
+        height: 100%;
+        display: none;
+    }
+
+    .right-menu-area {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logout-area {
+        width: 80%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logout-area a {
+        text-decoration: none;
+        width: 70%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #D72323;
+        color: #EEEEEE;
+        border-radius: 5px;
+    }
+}
