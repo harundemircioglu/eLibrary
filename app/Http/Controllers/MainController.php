@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
-use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Auth;
 
 class MainController extends Controller
