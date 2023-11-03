@@ -24,13 +24,13 @@ Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
 Route::get('/book/{bookId}', [ControllersBookController::class, 'bookDetails'])->name('bookDetails');
 
-Route::get('/profile/{userId}', [UserController::class, 'profile'])->name('profile');
+Route::get('/profile/{userId}', [UserController::class, 'profile'])->middleware('auth');
 
-Route::get('/my-libraries/{userId}', [LibraryController::class, 'myLibraries'])->name('myLibraries');
+Route::get('/my-libraries/{userId}', [LibraryController::class, 'myLibraries'])->middleware('auth')->name('myLibraries');
 
 Route::get('/edit-library/{libraryId}', [LibraryController::class, 'editLibrary'])->name('editLibrary');
 
-Route::get('/my-libraries/library/{libraryId}', [LibraryController::class, 'libraryDetail'])->name('libraryDetails');
+Route::get('/my-libraries/library/{libraryId}', [LibraryController::class, 'libraryDetail'])->middleware('auth')->name('libraryDetails');
 
 Route::get('/my-libraries/library/{libraryId}/deleteShowBook/{bookId}', [ControllersBookController::class, 'selectDeleteBook']);
 

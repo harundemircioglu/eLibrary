@@ -13,12 +13,8 @@ class UserController extends Controller
     //PROFİL İŞLEMLERİ
     public function profile($userId)
     {
-        if (Auth::check()) {
-            $userId = Auth::id();
-            $user = User::find($userId);
-            return view('profile', compact('user'));
-        }
-        return redirect()->back();
+        $user = User::find($userId);
+        return view('profile', compact('user'));
     }
 
     //PROFİL BİLGİLERİNİ GÜNCELLEME

@@ -41,27 +41,22 @@ class LibraryController extends Controller
     //KULLANICI KÜTÜPHANELERİ
     public function myLibraries($userId)
     {
-        if (Auth::check()) {
-            $user = Auth::user();
-            //ID DEĞERİNE GÖRE KULLANICININ KÜTÜPHANELERİ GELİYOR VE BU KÜTÜPHANELERDEKİ KİTAP SAYILARI SAYILIYOR
-            $librariesWithBookCount = Library::withCount('booksInLibraries')->where('user_id', Auth::id())->get();
-            return view('libraries', compact('user', 'librariesWithBookCount'));
-        }
-        return redirect()->back();
+        $user = Auth::user();
+        //ID DEĞERİNE GÖRE KULLANICININ KÜTÜPHANELERİ GELİYOR VE BU KÜTÜPHANELERDEKİ KİTAP SAYILARI SAYILIYOR
+        $librariesWithBookCount = Library::withCount('booksInLibraries')->where('user_id', Auth::id())->get();
+        return view('libraries', compact('user', 'librariesWithBookCount'));
     }
 
     //KÜTÜPHANE DETAY (BURADA KULLANICI KÜTÜPHENEYE EKLEMİŞ OLDUĞU KİTAPLARI GÖRMEKTEDİR)
     public function libraryDetail($libraryId)
     {
-        if (Auth::check()) {
-            $user = Auth::user();
-            $library = Library::with('users')->where('id', $libraryId)->first();
-            //SEÇİLEN KÜTÜPHANE İÇERİSİNDEKİ KİTAPLARI GÖSTEREN KOD
-            $booksInLibrary = BooksInLibrary::with(['library', 'book'])->where('library_id', $libraryId)->get();
-            //dd($booksInLibrary);
-            return view('library_details', compact('user', 'library', 'booksInLibrary'));
-        }
-        return redirect()->back();
+
+        $user = Auth::user();
+        $library = Library::with('users')->where('id', $libraryId)->first();
+        //SEÇİLEN KÜTÜPHANE İÇERİSİNDEKİ KİTAPLARI GÖSTEREN KOD
+        $booksInLibrary = BooksInLibrary::with(['library', 'book'])->where('library_id', $libraryId)->get();
+        //dd($booksInLibrary);
+        return view('library_details', compact('user', 'library', 'booksInLibrary'));
     }
 
     //KÜTÜPHANE DÜZENLE
